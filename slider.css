@@ -18,6 +18,9 @@
   
  .cssSlider {
      overflow: hidden;
+     /* width:500px; */
+     max-width: 700px;
+     margin:auto;
  }
   
  .sliderElements {
@@ -89,6 +92,7 @@
  label.next, label.previous{
      flex-basis:12%;
      min-width:30px;
+     max-width:60px;
      cursor: pointer; /* mouse-finger on hover */
  }
  div.next, div.previous{

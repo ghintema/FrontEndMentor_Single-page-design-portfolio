@@ -41,9 +41,9 @@ category                    24px/700/30px       24px/700/30px       24px/700/30p
     --fs-category:          var(--fs-400);
     
     /* Defintion of all line-spacings */
-    --ls-200: 2.625rem   /* 26px */
-    --ls-300: 2.75rem    /* 28px */
-    --ls-400: 2.875rem;  /* 30px */
+    --ls-200: 1.625rem;   /* 26px */
+    --ls-300: 1.75rem;    /* 28px */
+    --ls-400: 1.875rem;  /* 30px */
     --ls-500: 2rem;      /* 32px */
     --ls-600: 2.5rem;    /* 40px */
     --ls-700: 2.8125rem; /* 45px */
@@ -91,7 +91,7 @@ category                    24px/700/30px       24px/700/30px       24px/700/30p
 
 
 @media screen and (min-width:768px) {
-    root{
+    :root{
         /* Assignment of Font-sizes for tablet */
         --fs-primary-heading:var(--fs-900);
         --fs-secondary-heading:var(--fs-600);
@@ -107,7 +107,7 @@ category                    24px/700/30px       24px/700/30px       24px/700/30p
 }
 
 @media screen and (min-width:1440px){
-    root{
+    :root{
         /* Assignment of Font-sizes for desktop */
         --fs-primary-heading:var(--fs-1000);
         --fs-secondary-heading:var(--fs-800);
@@ -197,7 +197,7 @@ h1{margin:16px}
 }
 .category-1{
     position: relative;
-    /* width:343px; */
+    /* width:343px; */ /* no fixed width for responsivness */
     height: 364px;
     background-color: var(--clr-1);
     border-radius: 8px;
@@ -261,7 +261,9 @@ h1{margin:16px}
     text-align: center;
 }
 .image-amy{
+    display: inline;
     width:80%; /* 300px / 375px */
+    max-width: 364px;
     margin:16px 0px;
 }
 .hero-text h2 {margin:24px}
@@ -277,15 +279,108 @@ h3 {text-align: center;}
 
 /* SLIDER IN SLIDER.CSS */
 
-.call-to-action > p {margin:24px 0px}
+.call-to-action p {margin:24px 0px}
 .call-to-action {
     background-color: var(--clr-7);
-    margin:16px;
     border-radius: 10px;
     text-align: center;
     padding:49px 24px;
-    margin:56px 0px;
+    margin:56px 16px;
 }
+
+
+@media screen and (min-width:768px){
+
+    body{
+        max-width:960px;
+    }
+
+    header, footer {margin:39px}
+
+    button {
+        width:228px;
+        height: 56px;
+        border-radius: 28px;
+        border:none;
+    }
+
+    .made-easy p {
+        width:520px;
+        margin:auto;
+    }
+
+    .grid-container{
+        margin:39px;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .hero {margin:100px 0px}
+
+    .hero-text h2 {margin:20px 0px}
+    .hero-text {
+        width:339px;
+        text-align: left;
+    }
+
+    .image-amy {
+        position:relative;
+        right:69px;
+    }
+
+    .call-to-action p {margin:26px 0px}
+    .call-to-action {
+        padding:56px 75px;
+        margin:120px 39px 56px;
+    }   
+
+
+}
+
+
+@media screen and (min-width:1440px){
+    body{
+        max-width:1440px;
+    }
+
+    header, footer {margin:34px 165px}
+
+
+    .made-easy p {
+        width:650px;
+        margin:auto;
+    }
+
+    .grid-container{
+        margin:80px 165px 135px;
+        grid-template-columns: repeat(6,1fr);
+    }
+
+    .category-1{order:1}
+    .category-2{order:2}
+    .category-3{order:3}
+    .category-4{order:5}
+    .category-5{order:4}
+    .category-6{order:6}
+    .category-6{height:158px}
+
+    .call-to-action p{margin:26px 0px}
+    .call-to-action div {
+        width:540px;
+        text-align: left;
+    }
+    .call-to-action {
+        display: flex;
+        justify-content: space-between;
+        gap:px;
+        align-items: center;
+        padding:80px 95px 80px 65px;
+        margin:80px 165px 55px;
+    } 
+}
+
+
+
+
 
 
 
