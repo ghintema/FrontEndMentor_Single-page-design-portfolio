@@ -6,6 +6,7 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
   <link rel="stylesheet" href="stylesheet.css" class="">
+  <link rel="stylesheet" href="slider.css" class="">
   <link rel="stylesheet" href="stylesheet-index.css" class="">
   <title>Frontend Mentor | Single-page design portfolio</title>
 </head>
@@ -15,7 +16,7 @@
 <body>
   <header>
     <img src="assets/logo.svg" alt="" class="logo">
-    <button class="free-consultation fs-button fc-white bg-clr-bttn-1">Free Consultation</button>
+    <div class="free-consultation fs-button fc-white bg-clr-bttn-1">Free Consultation</button>
   </header>
   <main>
     <div class="made-easy">
@@ -59,73 +60,87 @@
     <div class="my-work">
       <h3 class="fs-third-heading fw-heading fc-black ls-third-heading">My work</h3>
     
-      <div class="slider">
-        
-        
-        <a href="#slide-1">1</a>
-        <a href="#slide-2">2</a>
-        <a href="#slide-3">3</a>
-        <a href="#slide-4">4</a>
-        <a href="#slide-5">5</a>
+      <!--Image-slider from https://ebene11.com/imageslider-ohne-javascript -->
+      <!-- zuerst das Sichtfenster -->
+      <div class="cssSlider">
       
-      
+        <!-- die inputs um den Slider zu Steuern -->
+        <input type="radio" name="slider" id="slide01" checked="checked">
+        <input type="radio" name="slider" id="slide02">
+        <input type="radio" name="slider" id="slide03">
+        <input type="radio" name="slider" id="slide04">
+        <input type="radio" name="slider" id="slide05">
 
+        <!-- die einzelnen Slides, hier als Liste angelegt -->
+        <ul class="sliderElements">
+            <li>
+                <figure>
+                    <img src="assets/image-slide-1.jpg" alt="">
+                    <!-- <figcaption>Hier könnte deine Beschreibung stehen.</figcaption> -->
+                </figure>
+                <div class="button-prev-next">
+                  <label for="slide05" class="previous"><div class="previous"><img src="assets/icon-arrow-left.svg" alt=""></div></label>
+                  <label for="slide02" class="next"><div class="next"><img src="assets/icon-arrow-right.svg" alt=""></div></label>
+              </div>
+            </li>
+            <li>
+                <figure>
+                    <img src="assets/image-slide-2.jpg" alt="" >
+                    <!-- <figcaption>Eine tolle Beschreibung</figcaption> -->
+                </figure>
+                <div class="button-prev-next">
+                  <label for="slide01" class="previous"><div class="previous"><img src="assets/icon-arrow-left.svg" alt=""></div></label>
+                  <label for="slide03" class="next"><div class="next"><img src="assets/icon-arrow-right.svg" alt=""></div></label>
+                </div>
+            </li>
+            <li>
+                <figure>
+                    <img src="assets/image-slide-3.jpg" alt="" >
+                    <!-- <figcaption>Die Beschreibung zum dritten Bild</figcaption> -->
+                </figure>
+                <div class="button-prev-next">
+                  <label for="slide02" class="previous"><div class="previous"><img src="assets/icon-arrow-left.svg" alt=""></div></label>
+                  <label for="slide04" class="next"><div class="next"><img src="assets/icon-arrow-right.svg" alt=""></div></label>
+                </div>
+            </li>
+            <li>
+                <figure>
+                    <img src="assets/image-slide-4.jpg" alt="" >
+                    <!-- <figcaption>Und noch ein toller Untertitel</figcaption> -->
+                </figure>
+                <div class="button-prev-next"> 
+                  <label for="slide03" class="previous"><div class="previous"><img src="assets/icon-arrow-left.svg" alt=""></div></label>
+                  <label for="slide05" class="next"><div class="next"><img src="assets/icon-arrow-right.svg" alt=""></div></label>
+                </div>
+            </li>
+            <li>
+              <figure>
+                  <img src="assets/image-slide-5.jpg" alt="" height="400" width="1200">
+                  <!-- <figcaption>Und noch ein toller Untertitel</figcaption> -->
+              </figure>
+              <div class="button-prev-next">  
+                <label for="slide04" class="previous"><div class="previous"><img src="assets/icon-arrow-left.svg" alt=""></div></label>
+                <label for="slide01" class="next"><div class="next"><img src="assets/icon-arrow-right.svg" alt=""></div></label>
+              </div>
+          </li>
+        </ul>
 
-        <label for="slide-1"><p>1</p></label>
-        <label for="slide-2"><p>2</p></label>
-        <label for="slide-3"><p>3</p></label>
-        <label for="slide-4"><p>4</p></label>
-        <label for="slide-5"><p>5</p></label>
-
-        <input type="checkbox" id="slide-1">
-        <input type="checkbox" id="slide-2">
-        <input type="checkbox" id="slide-3">
-        <input type="checkbox" id="slide-4">
-        <input type="checkbox" id="slide-5">
-
-        <div class="slides">
-          <div id="slide-1">
-            
-            
-              <img src="assets/image-slide-1.jpg" alt="" class="slides-image">
-            
-            <!-- <a href="#slide-5"><img src="assets/icon-arrow-left.svg" alt="icon-left" class="slider-back"></a>   -->
-            <!-- <a href="#slide-2"><img src="assets/icon-arrow-left.svg" alt="icon-right" class="slider-back"></a>  -->
-          </div>
-          <div id="slide-2">
-            
-            
-              <img src="assets/image-slide-2.jpg" alt="" class="slides-image">
-            
-            <!-- <a href="#slide-1"><img src="assets/icon-arrow-left.svg" alt="icon-left" class="slider-back"></a>  
-            <a href="#slide-3"><img src="assets/icon-arrow-left.svg" alt="icon-right" class="slider-back"></a> -->
-          </div>
-          <div id="slide-3">
-            
-              <img src="assets/image-slide-3.jpg" alt="" class="slides-image">
-            
-            <!-- <a href="#slide-2"><img src="assets/icon-arrow-left.svg" alt="icon-left" class="slider-back"></a>  
-            <a href="#slide-4"><img src="assets/icon-arrow-left.svg" alt="icon-right" class="slider-back"></a> -->
-          </div>
-          <div id="slide-4">
-            
-            
-              <img src="assets/image-slide-4.jpg" alt="" class="slides-image">
-            
-            <!-- <a href="#slide-3"><img src="assets/icon-arrow-left.svg" alt="icon-left" class="slider-back"></a>   -->
-            <!-- <a href="#slide-5"><img src="assets/icon-arrow-left.svg" alt="icon-right" class="slider-back"></a> -->
-          </div>
-          <div id="slide-5">
-            
-            
-              <img src="assets/image-slide-5.jpg" alt="" class="slides-image">
-            
-            <!-- <a href="#slide-4"><img src="assets/icon-arrow-left.svg" alt="icon-left" class="slider-back"></a>  
-            <a href="#slide-1"><img src="assets/icon-arrow-left.svg" alt="icon-right" class="slider-back"></a> -->
-          </div>
-        </div>
+        <!-- Eine Steuerung -->
+        <ul class="sliderControls">
+            <li><label for="slide01" class="breadcrums">1</label></li>
+            <li><label for="slide02" class="breadcrums">2</label></li>
+            <li><label for="slide03" class="breadcrums">3</label></li>
+            <li><label for="slide04" class="breadcrums">4</label></li>
+            <li><label for="slide05" class="breadcrums">5</label></li>
+        </ul>
       </div>
-    </div class="my-work">
+    </div>
+
+    <div class="call-to-action">
+      <h2 class="fs-secondary-heading fw-heading fc-white ls-secondary-heading">Book a call with me</h2>
+      <p class="fs-text fw-text fc-white ls-text">I’d love to have a chat to see how I can help you. The best first step is for us to discuss your project during a free consultation. Then we can move forward from there.</p>
+      <button class="free-consultation fs-button fc-white bg-clr-bttn-2">Free Consultation</button>
+    </div>
 
     
 
