@@ -93,10 +93,10 @@ category                    24px/700/30px       24px/700/30px       24px/700/30p
 @media screen and (min-width:768px) {
     :root{
         /* Assignment of Font-sizes for tablet */
-        --fs-primary-heading:var(--fs-900);
-        --fs-secondary-heading:var(--fs-600);
-        --fs-third-heading:var(--fs-600);
-        --fs-text:var(--fs-300);
+        --fs-primary-heading:   var(--fs-900);
+        --fs-secondary-heading: var(--fs-600);
+        --fs-third-heading:     var(--fs-600);
+        --fs-text:              var(--fs-300);
 
         /* Assignment of line-spacing for tablet */
         --ls-primary-heading:   var(--ls-900);
@@ -106,7 +106,7 @@ category                    24px/700/30px       24px/700/30px       24px/700/30p
     }
 }
 
-@media screen and (min-width:1440px){
+@media screen and (min-width:1440px) {
     :root{
         /* Assignment of Font-sizes for desktop */
         --fs-primary-heading:var(--fs-1000);
@@ -116,19 +116,20 @@ category                    24px/700/30px       24px/700/30px       24px/700/30p
         --ls-primary-heading:   var(--ls-1000);
         --ls-secondary-heading: var(--ls-800);
     }
+    body{border:3px solid green !important;}
 }
 
 
 /* DEFINTION OF UTILITY-CLASSES */
 
-.fs-primary-heading{font-size: var(--fs-primary-heading);}stylesheet.css
+.fs-primary-heading{font-size: var(--fs-primary-heading);}
 .fs-secondary-heading{font-size: var(--fs-secondary-heading);}
 .fs-third-heading{font-size:var(--fs-third-heading);}
 .fs-text{font-size: var(--fs-text);}
 .fs-button{font-size: var(--fs-button);}
 .fs-category{font-size:var(--fs-category)}
 
-.ls-primary-heading{line-height: var(--ls-primary-heading);}stylesheet.css
+.ls-primary-heading{line-height: var(--ls-primary-heading);}
 .ls-secondary-heading{line-height: var(--ls-secondary-heading);}
 .ls-third-heading{line-height: var(--ls-third-heading);}
 .ls-text{line-height: var(--ls-text);}
@@ -295,8 +296,11 @@ h3 {text-align: center;}
         max-width:960px;
     }
 
-    header, footer {margin:39px}
-
+    header {margin:39px 39px 64px}
+    .logo{
+        width:64px;
+        height: 64px;
+    }
     button {
         width:228px;
         height: 56px;
@@ -333,6 +337,7 @@ h3 {text-align: center;}
         margin:120px 39px 56px;
     }   
 
+    footer {margin:56px 39px}
 
 }
 
@@ -342,7 +347,7 @@ h3 {text-align: center;}
         max-width:1440px;
     }
 
-    header, footer {margin:34px 165px}
+    header {margin:34px 165px 66px}
 
 
     .made-easy p {
@@ -363,6 +368,23 @@ h3 {text-align: center;}
     .category-6{order:6}
     .category-6{height:158px}
 
+    .hero{
+        justify-content: space-between;
+        align-items: center;
+        margin:135px 165px 88px;
+
+    }
+    .hero-text{
+        width: 540px;
+        text-align: left;
+    }
+    .image-amy{
+        position: static;
+        max-width: none;
+        width:445px;
+        height:445px;
+    }
+
     .call-to-action p{margin:26px 0px}
     .call-to-action div {
         width:540px;
@@ -376,6 +398,7 @@ h3 {text-align: center;}
         padding:80px 95px 80px 65px;
         margin:80px 165px 55px;
     } 
+    footer {margin:56px 165px 64px}
 }
 
 
