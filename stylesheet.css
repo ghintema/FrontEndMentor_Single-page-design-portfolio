@@ -116,7 +116,6 @@ category                    24px/700/30px       24px/700/30px       24px/700/30p
         --ls-primary-heading:   var(--ls-1000);
         --ls-secondary-heading: var(--ls-800);
     }
-    body{border:3px solid green !important;}
 }
 
 
@@ -163,7 +162,6 @@ body * {
 body{
     max-width:570px;
     margin:auto;
-    border:1px solid red;
 }
 
 header, footer{
@@ -189,7 +187,6 @@ button {
 h1{margin:16px}
 
 .grid-container {
-    border:1px solid green;
     margin:0px 16px;
     display:grid;
     grid-template-columns: 1fr 1fr;
