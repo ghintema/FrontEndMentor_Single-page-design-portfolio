@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="stylesheet.css" class="">
   <link rel="stylesheet" href="slider.css" class="">
   <link rel="stylesheet" href="stylesheet-index.css" class="">
+  <script src="https://kit.fontawesome.com/83bca2e352.js" crossorigin="anonymous"></script>
   <title>Frontend Mentor | Single-page design portfolio</title>
 </head>
 
@@ -64,75 +65,45 @@
       <!-- zuerst das Sichtfenster -->
       <div class="cssSlider">
       
-        <!-- die inputs um den Slider zu Steuern -->
-        <input type="radio" name="slider" id="slide01" checked="checked">
-        <input type="radio" name="slider" id="slide02">
-        <input type="radio" name="slider" id="slide03">
-        <input type="radio" name="slider" id="slide04">
-        <input type="radio" name="slider" id="slide05">
+        <button class="previous" id="button-prev"><span>&#8249</span></button>
+        <button class="next" id="button-next">&#8250</button>
 
         <!-- die einzelnen Slides, hier als Liste angelegt -->
         <ul class="sliderElements">
-            <li>
+          
+            <li class="slide">
                 <figure>
                     <img src="assets/image-slide-1.jpg" alt="">
-                    <!-- <figcaption>Hier könnte deine Beschreibung stehen.</figcaption> -->
                 </figure>
-                <div class="button-prev-next">
-                  <label for="slide05" class="previous"><div class="previous bg-clr-bttn-1"><img src="assets/icon-arrow-left.svg" alt=""></div></label>
-                  <label for="slide02" class="next"><div class="next bg-clr-bttn-1"><img src="assets/icon-arrow-right.svg" alt=""></div></label>
-                </div>
+                
             </li>
-            <li>
+            <li class="slide">
                 <figure>
                     <img src="assets/image-slide-2.jpg" alt="" >
-                    <!-- <figcaption>Eine tolle Beschreibung</figcaption> -->
                 </figure>
-                <div class="button-prev-next">
-                  <label for="slide01" class="previous"><div class="previous bg-clr-bttn-1"><img src="assets/icon-arrow-left.svg" alt=""></div></label>
-                  <label for="slide03" class="next"><div class="next bg-clr-bttn-1"><img src="assets/icon-arrow-right.svg" alt=""></div></label>
-                </div>
+                
             </li>
-            <li>
+            <li class="slide">
                 <figure>
                     <img src="assets/image-slide-3.jpg" alt="" >
-                    <!-- <figcaption>Die Beschreibung zum dritten Bild</figcaption> -->
                 </figure>
-                <div class="button-prev-next">
-                  <label for="slide02" class="previous"><div class="previous bg-clr-bttn-1"><img src="assets/icon-arrow-left.svg" alt=""></div></label>
-                  <label for="slide04" class="next"><div class="next bg-clr-bttn-1"><img src="assets/icon-arrow-right.svg" alt=""></div></label>
-                </div>
+                
             </li>
-            <li>
+            <li class="slide">
                 <figure>
                     <img src="assets/image-slide-4.jpg" alt="" >
-                    <!-- <figcaption>Und noch ein toller Untertitel</figcaption> -->
                 </figure>
-                <div class="button-prev-next"> 
-                  <label for="slide03" class="previous"><div class="previous bg-clr-bttn-1"><img src="assets/icon-arrow-left.svg" alt=""></div></label>
-                  <label for="slide05" class="next"><div class="next bg-clr-bttn-1"><img src="assets/icon-arrow-right.svg" alt=""></div></label>
-                </div>
             </li>
-            <li>
+            <li class="slide">
               <figure>
                   <img src="assets/image-slide-5.jpg" alt="" height="400" width="1200">
-                  <!-- <figcaption>Und noch ein toller Untertitel</figcaption> -->
               </figure>
-              <div class="button-prev-next">  
-                <label for="slide04" class="previous"><div class="previous bg-clr-bttn-1"><img src="assets/icon-arrow-left.svg" alt=""></div></label>
-                <label for="slide01" class="next"><div class="next bg-clr-bttn-1"><img src="assets/icon-arrow-right.svg" alt=""></div></label>
-              </div>
-          </li>
+            </li>
+            
         </ul>
 
         <!-- Eine Steuerung -->
-        <ul class="sliderControls">
-            <li><label for="slide01" class="breadcrums">1</label></li>
-            <li><label for="slide02" class="breadcrums">2</label></li>
-            <li><label for="slide03" class="breadcrums">3</label></li>
-            <li><label for="slide04" class="breadcrums">4</label></li>
-            <li><label for="slide05" class="breadcrums">5</label></li>
-        </ul>
+      
       </div>
     </div>
 
@@ -151,6 +122,6 @@
     <button class="free-consultation fs-button fc-white bg-clr-bttn-1">Free Consultation</button>
   </footer>
 
-
+  <script src="slider.js"></script>
 </body>
 </html>

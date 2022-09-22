@@ -16,49 +16,60 @@
      overflow: hidden;
  }
   
- .cssSlider { 
-     overflow: hidden;
-     /* width:500px; */
-     max-width: 700px;
-     margin:auto;
+ .cssSlider {
+    position: relative;
+    overflow: hidden;
+    /* width:500px; */
+    max-width: 700px;
+    margin:auto;
+}
+ 
+.sliderElements {
+    list-style: none;
+    position: relative;
+    left: 0;
+    width: 900%;
+    margin-bottom: .8em;
+    padding: 0;
+    -webkit-transition: left .8s ease-in-out;
+    -moz-transition: left .8s ease-in-out;
+    -o-transition: left .8s ease-in-out;
+    transition: left .8s ease-in-out;
+}
+ 
+.slide {
+    position: relative;
+    float: left;
+    width: calc(100% / 9 - 1%); /* All sliders including any margins or gaps must be 100% or fit exactly into .sliderElements respectively */
+    position: relative;
+    margin:0.5%;
+    border-radius: 10px;
+}
+ 
+ .previous, .next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:absolute;
+    top:50%;
+    background: rgba(50,50,50,0.5);
+    transform: translateY(-50%); /* to perfectly center the button */
+    padding-bottom: 20px; /* to center the font inside the button */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 70px;
+    color:white;
+    z-index: 10;
  }
-  
- .sliderElements {
-     list-style: none;
-     position: relative;
-     left: 0;
-     width: 500%;
-     margin-bottom: .8em;
-     padding: 0;
-     -webkit-transition: left .8s ease-in-out;
-     -moz-transition: left .8s ease-in-out;
-     -o-transition: left .8s ease-in-out;
-     transition: left .8s ease-in-out;
+ .previous{
+    left: 7%;
  }
-  
- .sliderElements > li {
-     position: relative;
-     float: left;
-     width: 19%; /* All sliders including any margins or gaps must be 100% or fit exactly into .sliderElements respectively */
-     position: relative;
-     margin:0.5%;
-     border-radius: 10px;
+ .next {
+    right: 7%;
  }
-  
- #slide02:checked ~ .sliderElements {
-     left: -100%;
- }
-  
- #slide03:checked ~ .sliderElements {
-     left: -200%;
- }
-  
- #slide04:checked ~ .sliderElements {
-     left: -300%;
- }
-  
- #slide05:checked ~ .sliderElements {
-     left: -400%;
+ .previous:hover, .next:hover {
+    background: rgba(50,50,50,0.9);
  }
  /* Bildunterschrift auf dem Bild positionieren */
  .sliderElements figcaption {
@@ -77,72 +88,5 @@
      height: auto;
      border-radius: 10px;
  }
-  
- /* inputs aus dem Blickfeld schieben */
- .cssSlider input {
-     position: absolute;
-     left: -99999px;
- }
-  
- div.button-prev-next{
-     display: flex;
-     justify-content: center;
-     gap:20px;
- }
- label.next, label.previous{
-     flex-basis:12%;
-     min-width:30px;
-     max-width:60px;
-     cursor: pointer; /* mouse-finger on hover */
- }
- div.next, div.previous{
-     display: flex;
-     width: 100%; 
-     background-color: black;
-     border-radius:40px;
- 
- }
- 
- div.previous > img, div.next > img {
-    width:50%;
-    margin:25%;
- }
  
  
- 
- /* mittige Ausrichtung der breadcrums - 
- funktioniert im Zusammenspiel mit inline-block */
- .sliderControls {
-     position: relative;
-     bottom:20px;
-     text-align: center;
- }
-  
- /* Controls nebeneinander bringen */
- .sliderControls li {
-     display: inline-block;
- }
-  
- /* Controls auf einheitliche Maße bringen und die Ecken abrunden */
- .sliderControls .breadcrums {
-     width: 20px;
-     height: 20px;
-     line-height: 20px;
-     text-align: center;
-     border-radius: 50%;
-     display: block;
-     cursor: pointer; /* mouse-finger on hover */
-     background: black;
-     color:black;
- }
-  
- /* Attributselektor und indirekter Nachfahrkombinator zum ansteuern der labels */
- .sliderControls .breadcrums:hover,
- #slide01:checked ~ .sliderControls .breadcrums[for="slide01"],
- #slide02:checked ~ .sliderControls .breadcrums[for="slide02"],
- #slide03:checked ~ .sliderControls .breadcrums[for="slide03"],
- #slide04:checked ~ .sliderControls .breadcrums[for="slide04"],
- #slide05:checked ~ .sliderControls .breadcrums[for="slide05"] {
-     background: #ddd;
-     color: #ddd;
- }

@@ -44,6 +44,7 @@ Users should be able to:
 - writing markup, including styles via utility classes
 - writing layout for mobile design
 - writing layout for tablet and/or desktop
+- writing functionality for slider
 
 ### Built with
 
@@ -52,18 +53,15 @@ Users should be able to:
 - Custom CSS Utility classes for fonts and style for max mantainability 
 - Flexbox
 - CSS Grid
+- vanilla js for loopable slider with autoplay
 - Mobile-first workflow
 - No frameworks used.
 
 
 ### What I learned
 
-How to build a purely css-slider and the limitations of css for this task.
-Thanks a lot to https://ebene11.com/imageslider-ohne-javascript
+How to build a loopable slider in vanila Javascript with autoplay functionality.
 
-Limitations are: 
-- Nav-Buttons are part of each slider, therefore sliding with the slid.
-- navigation in the loop is not possible.
 
 ### Continued development
 
@@ -71,7 +69,7 @@ In future: Exchanging the slider for a more sophisiticated JavaScritp one.
 
 ## Author
 
-Harm Intemann, Bolivia, August 2022
+Harm Intemann, Bolivia, September 2022
 
 ## Acknowledgment
 
