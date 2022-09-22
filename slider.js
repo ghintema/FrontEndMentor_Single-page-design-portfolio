@@ -75,3 +75,6 @@ buttonNext.addEventListener('mouseenter', stopAutoPlay);
 buttonPrev.addEventListener('mouseenter', stopAutoPlay);
 slide.addEventListener('mouseenter', stopAutoPlay);
 slide.addEventListener('mouseleave', startAutoPlay);
+
+slide.addEventListener('swiped-left', () => {moveOn(1)});
+slide.addEventListener('swiped-right', () => {moveOn(-1)});
