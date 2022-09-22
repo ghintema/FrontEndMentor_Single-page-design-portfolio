@@ -25,10 +25,11 @@
 }
  
 .sliderElements {
+    display: flex;
     list-style: none;
     position: relative;
     left: 0;
-    width: 900%;
+    /* width is beeing set in slider.js according to number of slides */
     margin-bottom: .8em;
     padding: 0;
     -webkit-transition: left .8s ease-in-out;
@@ -39,10 +40,9 @@
  
 .slide {
     position: relative;
-    float: left;
-    width: calc(100% / 9 - 1%); /* All sliders including any margins or gaps must be 100% or fit exactly into .sliderElements respectively */
     position: relative;
-    margin:0.5%;
+    /* width is beeing set in slider.js according to number of slides */
+    padding:0.4%; 
     border-radius: 10px;
 }
  

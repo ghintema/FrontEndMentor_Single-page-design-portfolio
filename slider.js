@@ -8,32 +8,29 @@ let intervalTime = 2500;
 
 // Making clones: First two and last two slides need be cloned.
 const firstClone = slides[0].cloneNode(true);
-const secondClone = slides[1].cloneNode(true);
 const lastClone = slides[slides.length - 1].cloneNode(true);
-const secondLastClone = slides[slides.length - 2].cloneNode(true);
 
 // Giving Id's to the clones
 firstClone.id = 'firstClone';
-secondClone.id = 'secondClone';
 lastClone.id = 'lastClone';
-secondLastClone.id = 'secondLastClone';
 
 // .prepend and .append need be called on the parent DOM-Element. 
 slides[0].parentElement.prepend(lastClone);
-slides[0].parentElement.prepend(secondLastClone);
 slides[0].parentElement.append(firstClone);
-slides[0].parentElement.append(secondClone);
 
 
-// Starting with "2" because index "0" and "1" are mere clones of last and second-last slide
-let index = 2; // 
-//const slideWidth = slides[index].clientWidth
-//slide.style.transform = `translateX(-${slideWidth * index }px)`
+let index = 1; // setting start-point to original first slide. 
 slide.style.left = `-${index}00%`
 
+// width adaption according to numer of slides
+slide.style.width = `${slides.length}00%`
+for (let i = 0; i < slides.length; i++) {
+    slides[i].style.width = `${100/slides.length}%`
+}
+
 const moveOn = (step) => { 
-    if (index > slides.length - 3) {return} // prevents fast overclicking beyond last slide
-    if (index < 2 ) {return} // prevents fast underclicking below first slide
+    if (index > slides.length - 2) {return} // prevents fast overclicking beyond last slide
+    if (index < 1 ) {return} // prevents fast underclicking below first slide
     index += step;
     slide.style.transition = '0.6s ease';
     //slide.style.transform = `translateX(-${slideWidth * index }px)`
@@ -42,14 +39,14 @@ const moveOn = (step) => {
 
 const reset = () => {
     if (slides[index].id === 'firstClone') {  
-        index = 2                           
+        index = 1                           
         slide.style.transition = 'none';
         //slide.style.transform = `translateX(${ - slideWidth * index}px)`
         slide.style.left = `-${index}00%`
     }
     
     if (slides[index].id === 'lastClone') { 
-        index = slides.length - 3      
+        index = slides.length - 2      
         slide.style.transition = 'none';
         //slide.style.transform = `translateX(${ - slideWidth * index}px)`
         slide.style.left = `-${index}00%`
